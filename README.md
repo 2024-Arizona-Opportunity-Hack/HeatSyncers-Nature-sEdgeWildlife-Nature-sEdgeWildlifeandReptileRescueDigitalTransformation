@@ -3,18 +3,18 @@
 
 ## Quick Links
 - [Hackathon Details](https://www.ohack.dev/hack/2024_fall)
-- [Team Slack Channel](https://opportunity-hack.slack.com/app_redirect?channel=heatsyncers)
+- [Team Slack Channel](https://opportunity-hack.slack.com/app_redirect?channel=heatsyncers2)
 - [Nonprofit Partner](https://ohack.dev/nonprofit/BQkux9KMxEXksUK7ec7h)
 - [Problem Statement](https://ohack.dev/project/nsxPhAtgiL8MMiX0rKj7)
-
-## Creator
-@Charlotte Burton (on Slack)
+- [Slides](https://docs.google.com/presentation/d/1UI22QDOXYZPNS0dXjt2dYQz0dC1h001DdIqxctKVUYA/edit#slide=id.p)
+- [Software Requirements Doc (SRD)](https://docs.google.com/document/d/1kqaeYu6NJQBYpBM0G1_g2Zlj_jb-NAWrMyHfIlDqWII/edit#heading=h.vsowpyyudxa7) 
 
 ## Team "HeatSyncers"
-- [Team Member 1](GitHub profile link)
-- [Team Member 2](GitHub profile link)
-- [Team Member 3](GitHub profile link)
-<!-- Add all team members -->
+- [atvo912](https://github.com/atvo912)
+- [charburton18](https://github.com/charburton18)
+- [cotyj](https://github.com/CotyJ)
+- [malakada](https://github.com/malakada)
+- [robinallenaz](https://github.com/robinallenaz)
 
 ## Project Overview
 Brief description of your project and its goals.
