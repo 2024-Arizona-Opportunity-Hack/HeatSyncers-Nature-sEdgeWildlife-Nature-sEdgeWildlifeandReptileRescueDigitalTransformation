@@ -1,0 +1,19 @@
+databases:
+  - name: newrr
+    databaseName: newrr
+    user: newrr
+
+services:
+  - type: web
+    name: newrr
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: newrr
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+

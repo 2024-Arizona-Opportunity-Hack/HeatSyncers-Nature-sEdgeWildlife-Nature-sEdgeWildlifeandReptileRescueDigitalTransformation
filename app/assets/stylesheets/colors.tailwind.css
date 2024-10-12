@@ -1,0 +1,12 @@
+@tailwind base;
+
+@layer base {
+  :root {
+    /* --color-primary: #f3c614; */
+    /* --color-secondary: #353535; */
+    /* --color-tertiary: #333; */
+    /* --color-quaternary: #111; */
+
+    --brand-navy: 0, 84, 165;
+  }
+}
