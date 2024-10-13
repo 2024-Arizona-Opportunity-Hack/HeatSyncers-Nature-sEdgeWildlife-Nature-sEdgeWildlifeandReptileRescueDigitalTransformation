@@ -28,7 +28,7 @@ Brief description of your project and its goals.
 ## Environment Setup
 
 > [!IMPORTANT]
-> Make sure to install these pre-requisistes first:
+> Make sure to install these pre-requisites first:
 >
 > - Ruby 3.3.2 ([chruby](https://github.com/postmodern/chruby) is recommended for managing Ruby versions)
 > - Rails 7.1 (follow [this guide](https://guides.rubyonrails.org/development_dependencies_install.html) to install)
