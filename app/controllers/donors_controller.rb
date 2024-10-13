@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class DonorsController < ApplicationController
+  layout "portal"
   def index
     @donors = User.donors
   end
