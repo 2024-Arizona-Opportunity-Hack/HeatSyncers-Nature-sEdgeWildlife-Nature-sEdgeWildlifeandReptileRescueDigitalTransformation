@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "/portal", to: "portal#index"
 
+  resources :donations
+
   root to: "home#index"
 end
 
