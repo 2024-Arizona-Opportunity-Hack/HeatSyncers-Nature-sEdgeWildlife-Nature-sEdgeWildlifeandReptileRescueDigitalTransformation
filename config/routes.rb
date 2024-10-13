@@ -1,12 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get "donors/index"
-  get "donors/show"
-  get "donors/new"
-  get "donors/create"
-  get "donors/update"
-  get "donors/destroy"
   devise_for :users
 
   get "up" => "rails/health#show", as: :rails_health_check
@@ -17,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :donations
   resources :donor_contacts
+  resources :donors
 
   root to: "home#index"
 end
