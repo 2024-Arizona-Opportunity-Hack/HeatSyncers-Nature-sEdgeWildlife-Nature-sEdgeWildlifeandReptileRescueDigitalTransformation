@@ -3,8 +3,10 @@
 class DonationsController < ApplicationController
   before_action :authenticate_admin!, except: %i[new create]
 
+  layout "portal", except: %i[new]
+
   def index
-    @donations = Donation.all
+    @donations = Donation.all.page params[:page]
   end
 
   def show

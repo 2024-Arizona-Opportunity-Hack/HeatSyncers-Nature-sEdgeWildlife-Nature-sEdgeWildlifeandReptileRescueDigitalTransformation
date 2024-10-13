@@ -1,2 +1,27 @@
-<h1>Donations index</h1>
-<p>Find me in app/views/donations/index.html.erb</p>
+<h1>Donations</h1>
+
+<% content_for :index_table_header do %>
+  <th scope="col" class="px-4 py-3">Date</th>
+  <th scope="col" class="px-4 py-3">Amount</th>
+  <th scope="col" class="px-4 py-3">Donor</th>
+  <th scope="col" class="px-4 py-3">
+      <span class="sr-only">Actions</span>
+  </th>
+<% end %>
+
+<% content_for :index_table_rows do %>
+  <% @donations.each do |donation| %>
+    <tr class="border-b dark:border-gray-700">
+      <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"><%= donation.date %></th>
+      <td class="px-4 py-3"><%= donation.amount %></td>
+      <td class="px-4 py-3"><%= donation.donor.name %></td>
+      <td class="px-4 py-3 flex items-center justify-end">
+        <%= link_to "View", donation, class: "block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" %>
+        <%= link_to "Edit", edit_donation_path(donation), class: "block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" %>
+      </td>
+    </tr>
+  <% end %>
+<% end %>
+
+<%= render "shared/index_table", collection: @donations %>
+
