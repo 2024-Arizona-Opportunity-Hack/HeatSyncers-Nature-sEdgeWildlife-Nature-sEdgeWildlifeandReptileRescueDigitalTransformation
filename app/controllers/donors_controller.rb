@@ -3,7 +3,7 @@
 class DonorsController < ApplicationController
   layout "portal"
   def index
-    @donors = User.donors
+    @donors = User.donors.page params[:page]
   end
 
   def show

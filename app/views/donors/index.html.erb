@@ -1,2 +1,33 @@
-<h1>Donors#index</h1>
-<p>Find me in app/views/donors/index.html.erb</p>
+<h1>Donors</h1>
+
+<% content_for :index_table_headers do %>
+  <th scope="col" class="px-4 py-3">Name</th>
+  <th scope="col" class="px-4 py-3">Email</th>
+  <th scope="col" class="px-4 py-3">Zip</th>
+  <th scope="col" class="px-4 py-3">Last contact</th>
+  <th scope="col" class="px-4 py-3">Last donation</th>
+  <th scope="col" class="px-4 py-3">Total donations</th>
+  <th scope="col" class="px-4 py-3">
+      <span class="sr-only">Actions</span>
+  </th>
+<% end %>
+
+<% content_for :index_table_rows do %>
+  <% @donors.each do |donor| %>
+    <tr class="border-b dark:border-gray-700">
+      <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white"><%= donor.name %></th>
+      <td class="px-4 py-3"><%= donor.email %></td>
+      <td class="px-4 py-3"><%= donor.zip_code %></td>
+      <td class="px-4 py-3"><%= donor.last_contact %></td>
+      <td class="px-4 py-3"><%= donor.last_donation %></td>
+      <td class="px-4 py-3"><%= donor.total_donations %></td>
+      <td class="px-4 py-3 flex items-center justify-end">
+        <%= link_to "View", donor_path(donor), class: "block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" %>
+        <%= link_to "Edit", edit_donor_path(donor), class: "block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" %>
+      </td>
+    </tr>
+  <% end %>
+<% end %>
+
+<%= render "shared/index_table", collection: @donors %>
+
