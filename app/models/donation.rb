@@ -6,5 +6,9 @@ class Donation < ApplicationRecord
   def date
     created_at.to_date
   end
+
+  def amount
+    ActiveSupport::NumberHelper.number_to_currency(super)
+  end
 end
 
