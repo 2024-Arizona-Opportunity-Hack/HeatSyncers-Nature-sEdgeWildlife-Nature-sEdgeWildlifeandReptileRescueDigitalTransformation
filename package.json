@@ -16,13 +16,6 @@
     "postcss-import": "^16.1.0"
   },
   "scripts": {
-    "build:css": "npm-run-all --parallel build:css:*",
-    "watch:css": "npm-run-all --parallel watch:css:*",
-
-    "build:css:application": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
-    "build:css:marketing": "tailwindcss -i ./app/assets/stylesheets/marketing.tailwind.css -o ./app/assets/builds/marketing.css --minify",
-
-    "watch:css:application": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --watch",
-    "watch:css:marketing": "tailwindcss -i ./app/assets/stylesheets/marketing.tailwind.css -o ./app/assets/builds/marketing.css --watch"
+    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify"
   }
 }

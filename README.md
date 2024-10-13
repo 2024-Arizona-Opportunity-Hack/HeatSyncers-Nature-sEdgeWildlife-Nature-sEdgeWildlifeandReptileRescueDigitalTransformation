@@ -28,7 +28,7 @@ Brief description of your project and its goals.
 ## Environment Setup
 
 > [!IMPORTANT]
-> Make sure to install these pre-requisistes first:
+> Make sure to install these pre-requisites first:
 >
 > - Ruby 3.3.5 ([chruby](https://github.com/postmodern/chruby) is recommended for managing Ruby versions)
 > - Rails 7.2.1 (follow [this guide](https://guides.rubyonrails.org/development_dependencies_install.html) to install)
@@ -41,7 +41,7 @@ bundle install
 npm install
 ```
 
-Local development uses Foreman to run two paralell processes: one for the Rails server (`rails s`) and one for compiling Tailwind (`npm build:css --watch`). To start these, simply run:
+Local development uses Foreman to run two parallel processes: one for the Rails server (`rails s`) and one for compiling Tailwind (`npm build:css --watch`). To start these, simply run:
 
 ```bash
 bin/dev
