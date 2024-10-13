@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 class DonationsController < ApplicationController
+  before_action :authenticate_admin!, except: %i[new create]
+
   def index
     @donations = Donation.all
   end
