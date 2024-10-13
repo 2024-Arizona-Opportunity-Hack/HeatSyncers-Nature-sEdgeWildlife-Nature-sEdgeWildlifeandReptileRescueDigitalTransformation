@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 class DonorsController < ApplicationController
+  before_action :authenticate_admin!
+
   layout "portal"
+
   def index
-    @donors = User.donors
+    @donors = User.donors.page params[:page]
   end
 
   def show
