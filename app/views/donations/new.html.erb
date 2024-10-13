@@ -5,34 +5,6 @@
       <%= form_for @donation do |f| %>
           <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
               <div class="w-full">
-                  <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">First Name</label>
-                  <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="John" required="">
-              </div>
-              <div class="w-full">
-                <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Last Name</label>
-                <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Smith" required="">
-            </div>
-              <div class="w-full">
-                  <label for="address1" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address 1</label>
-                  <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="123 North Pole St" required="">
-              </div>
-              <div class="w-full">
-                <label for="address2" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Address 2</label>
-                <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Suite 456" required="">
-              </div>
-              <div class="w-full">
-                <label for="city" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">City</label>
-                <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Tempe" required="">
-              </div>
-              <div class="w-full">
-                <label for="state" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">State</label>
-                <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="AZ" required="">
-              </div>
-              <div class="w-full">
-                <label for="zip" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">ZIP Code</label>
-                <input type="text" name="brand" id="brand" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="85281" required="">
-              </div>
-              <div class="w-full">
                   <label for="price" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Donation Amount ($)</label>
                   <%= f.text_field :amount, placeholder: "$2999", required: true, id: "amount", for: "amount", class: "bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" %>
               </div>
