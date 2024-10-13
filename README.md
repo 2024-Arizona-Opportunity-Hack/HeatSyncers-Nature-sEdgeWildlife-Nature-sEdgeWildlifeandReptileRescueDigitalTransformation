@@ -30,8 +30,8 @@ Brief description of your project and its goals.
 > [!IMPORTANT]
 > Make sure to install these pre-requisistes first:
 >
-> - Ruby 3.3.2 ([chruby](https://github.com/postmodern/chruby) is recommended for managing Ruby versions)
-> - Rails 7.1 (follow [this guide](https://guides.rubyonrails.org/development_dependencies_install.html) to install)
+> - Ruby 3.3.5 ([chruby](https://github.com/postmodern/chruby) is recommended for managing Ruby versions)
+> - Rails 7.2.1 (follow [this guide](https://guides.rubyonrails.org/development_dependencies_install.html) to install)
 > - Postgres (either via brew or [Postgres.app](https://postgresapp.com/))
 
 Once you're ready to go, you'll need to make sure to install via both Bundler and NPM:
