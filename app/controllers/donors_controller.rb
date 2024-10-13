@@ -2,7 +2,7 @@
 
 class DonorsController < ApplicationController
   def index
-    @donors = User.where(is_donor: true)
+    @donors = User.donors
   end
 
   def show
