@@ -2,7 +2,7 @@
 
 class DonorsController < ApplicationController
   def index
-    @donors = User.donors
+    @donors = User.donors.page params[:page]
   end
 
   def show
