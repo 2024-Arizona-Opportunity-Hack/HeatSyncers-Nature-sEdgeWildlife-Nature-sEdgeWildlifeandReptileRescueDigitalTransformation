@@ -6,8 +6,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable
 
-  has_many :donor_contacts, dependent: :destroy
-  has_many :donations, dependent: :nullify
+  has_many :donor_contacts, dependent: :destroy, foreign_key: :donor_id, inverse_of: :donor
+  has_many :donations, dependent: :nullify, foreign_key: :donor_id, inverse_of: :donor
 
   scope :donors, -> { where(is_donor: true) }
   scope :admins, -> { where(is_admin: true) }
@@ -17,7 +17,20 @@ class User < ApplicationRecord
   end
 
   def address
-    "#{street_address} #{apt_suite} #{city}, #{state} #{zip}"
+    "#{street_address} #{apt_suite} #{city}, #{state} #{zip_code}"
+  end
+
+  def last_contact
+    donor_contacts.last&.contact_date
+  end
+
+  def last_donation
+    donations.last&.amount
+  end
+
+  def total_donations
+    total = donations.sum(:amount)
+    total.positive? ? total : nil
   end
 end
 
