@@ -41,7 +41,7 @@ bundle install
 npm install
 ```
 
-Local development uses Foreman to run two paralell processes: one for the Rails server (`rails s`) and one for compiling Tailwind (`npm build:css --watch`). To start these, simply run:
+Local development uses Foreman to run two parallel processes: one for the Rails server (`rails s`) and one for compiling Tailwind (`npm build:css --watch`). To start these, simply run:
 
 ```bash
 bin/dev
