@@ -27,7 +27,7 @@ module.exports = {
   ],
   theme: {
     colors: {
-      // primary: brandColors.example,
+      primary: brandColors.navy,
       // secondary: brandColors.example,
       // neutral: brandColors.example,
     },
