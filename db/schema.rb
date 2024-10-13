@@ -10,9 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_13_144120) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_13_201255) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "donation_buckets", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "donations", force: :cascade do |t|
     t.float "amount"
@@ -20,6 +27,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_13_144120) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "donor_id", null: false
+    t.bigint "donation_bucket_id"
+    t.index ["donation_bucket_id"], name: "index_donations_on_donation_bucket_id"
     t.index ["donor_id"], name: "index_donations_on_donor_id"
   end
 
@@ -53,6 +62,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_13_144120) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "donations", "donation_buckets"
   add_foreign_key "donations", "users", column: "donor_id"
   add_foreign_key "donor_contacts", "users", column: "donor_id"
 end
