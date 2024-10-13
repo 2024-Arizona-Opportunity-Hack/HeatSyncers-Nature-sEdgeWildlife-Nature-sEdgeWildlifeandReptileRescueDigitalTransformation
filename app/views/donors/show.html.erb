@@ -35,12 +35,4 @@
   Edit your data
 </button>
 </div>
-
-<% unless @donor.donations.empty? %>
-  <%= render "shared/index_table", collection: @donor.donations %>
-<% else %>
-  <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden h-64 flex flex-col justify-around">
-    <h2 class="flex flex-col items-center text-xl font-bold leading-none text-gray-900 dark:text-white sm:text-2xl">No donations to report</h2>
-  </div>
-<% end %>
 </div>
