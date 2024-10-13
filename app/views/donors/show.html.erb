@@ -1,8 +1,46 @@
-<h1>Donors#show</h1>
-<p>Find me in app/views/donors/show.html.erb</p>
+<div class="mx-auto max-w-screen-xl px-4 lg:px-12">
+<div class="py-4 md:py-8">
+<div class="mb-4 grid gap-4 sm:grid-cols-2 sm:gap-8 lg:gap-16">
+  <div class="space-y-4">
+    <div class="flex space-x-4">
+      <h2 class="flex items-center text-xl font-bold leading-none text-gray-900 dark:text-white sm:text-2xl"><%=@donor.first_name%> <%=@donor.last_name%></h2>
+    </div>
+    <dl class="">
+      <dt class="font-semibold text-gray-900 dark:text-white">Email Address</dt>
+      <dd class="text-gray-500 dark:text-gray-400"><%= @donor.email %></dd>
+    </dl>
+    <dl>
+      <dt class="font-semibold text-gray-900 dark:text-white">Address</dt>
+      <dd class="flex items-center gap-1 text-gray-500 dark:text-gray-400">
+        <svg class="hidden h-5 w-5 shrink-0 text-gray-400 dark:text-gray-500 lg:inline" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5" />
+        </svg>
+        <%= @donor.address %>
+      </dd>
+    </dl>
+    <dl>
+      <dt class="font-semibold text-gray-900 dark:text-white">Last Donation</dt>
+      <dd class="text-gray-500 dark:text-gray-400"><%= @donor.last_donation %></dd>
+    </dl>
+    <dl>
+      <dt class="font-semibold text-gray-900 dark:text-white">Last Contact</dt>
+      <dd class="text-gray-500 dark:text-gray-400"><%= @donor.last_contact %></dd>
+    </dl>
+  </div>
+</div>
+<button type="button" data-modal-target="accountInformationModal2" data-modal-toggle="accountInformationModal2" class="inline-flex w-full items-center justify-center rounded-lg bg-primary-700 px-5 py-2.5 text-sm font-medium text-white hover:bg-primary-800 focus:outline-none focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 sm:w-auto">
+  <svg class="-ms-0.5 me-1.5 h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m14.304 4.844 2.852 2.852M7 7H4a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-4.5m2.409-9.91a2.017 2.017 0 0 1 0 2.853l-6.844 6.844L8 14l.713-3.565 6.844-6.844a2.015 2.015 0 0 1 2.852 0Z"></path>
+  </svg>
+  Edit your data
+</button>
+</div>
 
 <% unless @donor.donations.empty? %>
   <%= render "shared/index_table", collection: @donor.donations %>
 <% else %>
-  <div> NO DONATIONS </div>
+  <div class="bg-white dark:bg-gray-800 relative shadow-md sm:rounded-lg overflow-hidden h-64 flex flex-col justify-around">
+    <h2 class="flex flex-col items-center text-xl font-bold leading-none text-gray-900 dark:text-white sm:text-2xl">No donations to report</h2>
+  </div>
 <% end %>
+</div>
