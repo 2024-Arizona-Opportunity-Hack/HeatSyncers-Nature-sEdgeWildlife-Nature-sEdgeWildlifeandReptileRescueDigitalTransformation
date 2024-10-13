@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   resources :donations
   resources :donor_contacts
+  resources :donors
 
   root to: "home#index"
 end

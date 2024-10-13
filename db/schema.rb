@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_13_001609) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_13_144120) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -19,12 +19,17 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_13_001609) do
     t.text "note"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "donor_id", null: false
+    t.index ["donor_id"], name: "index_donations_on_donor_id"
   end
 
   create_table "donor_contacts", force: :cascade do |t|
     t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "donor_id", null: false
+    t.text "note"
+    t.index ["donor_id"], name: "index_donor_contacts_on_donor_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -37,7 +42,17 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_13_001609) do
     t.datetime "updated_at", null: false
     t.boolean "is_admin", default: false, null: false
     t.boolean "is_donor", default: false, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "street_address"
+    t.string "apt_suite"
+    t.string "city"
+    t.string "state"
+    t.string "zip_code"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "donations", "users", column: "donor_id"
+  add_foreign_key "donor_contacts", "users", column: "donor_id"
 end
