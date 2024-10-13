@@ -1,2 +1,8 @@
 <h1>Donors#show</h1>
 <p>Find me in app/views/donors/show.html.erb</p>
+
+<% unless @donor.donations.empty? %>
+  <%= render "shared/index_table", collection: @donor.donations %>
+<% else %>
+  <div> NO DONATIONS </div>
+<% end %>
