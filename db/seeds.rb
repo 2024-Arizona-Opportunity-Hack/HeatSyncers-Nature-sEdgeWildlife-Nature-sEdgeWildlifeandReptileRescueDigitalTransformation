@@ -3,6 +3,9 @@
 require_relative "seeds/admin"
 require_relative "seeds/donor"
 
-initialize_admin!
-initialize_donors!
+if Rails.env.development?
+  initialize_admin!
+  initialize_default_donors!
+  add_fake_donors!
+end
 

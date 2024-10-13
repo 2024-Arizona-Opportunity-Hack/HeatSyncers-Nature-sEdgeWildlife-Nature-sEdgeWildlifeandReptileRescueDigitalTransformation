@@ -8,6 +8,7 @@ gem "bootsnap", require: false
 gem "cssbundling-rails"
 gem "devise"
 gem "dotenv"
+gem "faker"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
