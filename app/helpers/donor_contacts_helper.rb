@@ -1,0 +1,2 @@
+module DonorContactsHelper
+end
