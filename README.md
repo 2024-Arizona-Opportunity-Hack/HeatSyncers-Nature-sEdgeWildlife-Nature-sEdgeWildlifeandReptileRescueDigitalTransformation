@@ -19,6 +19,9 @@
 ## Project Overview
 Brief description of your project and its goals.
 
+### Product management
+Follow along with our Trello board: [2024 HeatSyncers Trello](https://trello.com/b/sfFEXQwp/heatsyncers-2024-opportunity-hack)
+
 ## Tech Stack
 - Frontend: HTML/CSS/JS
 - Backend: Ruby on Rails
