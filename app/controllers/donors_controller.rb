@@ -13,6 +13,10 @@ class DonorsController < ApplicationController
     @donor = User.new
   end
 
+  def edit
+    @donor = User.find(params[:id])
+  end
+
   def create
     @donor = User.new(user_params)
 
