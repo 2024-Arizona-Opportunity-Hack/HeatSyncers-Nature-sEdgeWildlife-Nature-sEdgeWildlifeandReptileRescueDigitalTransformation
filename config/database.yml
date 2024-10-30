@@ -21,8 +21,8 @@ test:
 
 production:
   <<: *default
-  database: newrr_production
-  username: newrr
+  database: <%= ENV['NEWRR_DATABASE_NAME'] %>
+  username: <%= ENV['NEWRR_DATABASE_USER'] %>
   url: <%= ENV['DATABASE_URL'] %>
   password: <%= ENV['NEWRR_DATABASE_PASSWORD'] %>
 default: &default
